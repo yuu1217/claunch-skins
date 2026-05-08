@@ -1,24 +1,25 @@
 # README
 
-CLaunch用のスキンを置いています。
+> このプロジェクトはほぼAIによって構築されています。
 
-> このプロジェクトはほぼ全てAIによって構築されています。
+CLaunch用のスキンを置いています。
 
 ## Flat Dark
 
 ![Flat Dark](screenshots/flat_dark.png)
 
-## ビルド
+このスクショはデフォルト設定からフォント等を変更しています。
+
+### ビルド
 
 ```powershell
 uv sync
 uv run python -m flat_dark.build
 ```
 
-出力: `dist/Flat Dark.zip`
+`dist/Flat Dark.zip`に出力されます。
 
 ## 構成
 
-- `src/flat_dark/` — 生成コード
-- `docs/` — 設計メモ
-- `references/` — 参考スキン・モック
+- `src/`: ビルドスクリプト
+- `references/`: 参考
