@@ -10,7 +10,7 @@ from . import tokens as T
 XML_DECL = '<?xml version="1.0" encoding="UTF-16" standalone="yes" ?>'
 
 # 文字色などキャプション/タブ/ボタン/メニューのテキスト装飾は共通値
-_TEXT_COLOR = T.hex_str(T.TEXT_FG)         # "#F3F3F3"
+_TEXT_COLOR = T.hex_str(T.TEXT_FG)  # "#F3F3F3"
 _TEXT_MUTED_COLOR = T.hex_str(T.TEXT_MUTED)  # "#C7C7C7"
 
 _FONT_FACE_DEFAULT = "UD デジタル 教科書体 NK"

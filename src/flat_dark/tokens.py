@@ -163,16 +163,12 @@ class SkinVariant:
 
     tab_position: TabPosition
 
-    author: str = "Yuuho"
-    version: str = "4.20"
+    author: str = "Yuu"
+    version: str = "1"
 
     @property
     def comment(self) -> str:
-        return (
-            "フラットなダークカラーの CLaunch スキン。\n"
-            f"タブ位置: {self.tab_position}\n"
-            "推奨: 表示モード1 (アイコングリッド) / 32bpp 環境必須"
-        )
+        return "Flat dark color CLaunch skin."
 
 
 VARIANTS: list[SkinVariant] = [
