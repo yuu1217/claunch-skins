@@ -18,8 +18,3 @@ uv run python -m flat_dark.build
 ```
 
 `dist/Flat Dark.zip`に出力されます。
-
-## 構成
-
-- `src/`: ビルドスクリプト
-- `references/`: 参考
