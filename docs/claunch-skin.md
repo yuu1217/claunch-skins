@@ -1,6 +1,6 @@
 # CLaunch スキン仕様メモ
 
-CLaunch (Ver. 4.20+) のスキンを自作するときに必要な情報をまとめたもの。公式ドキュメントは情報が散らばっているので、要点だけ抽出している。
+CLaunchのスキンを自作するときに必要な情報をまとめたもの。公式ドキュメントは情報が散らばっているので、要点だけ抽出している。
 
 ## 1. パッケージ形式
 
@@ -237,15 +237,15 @@ zip直下にファイルを配置する（中間フォルダは作らない）�
 
 複数状態を1枚のPNGに縦/横スタックで持たせる。デコードはCLaunchが`top`/`left`/`width`/`height`で切り出す。
 
-| 画像 | 並び |
-|---|---|
-| `tab.png` | 縦3段: normal / hover / active |
-| `button.png` | 縦3段: normal / hover / down |
-| `sysbutton.png` | 4列×4段: 列=Search/Mode/Pin/Close, 段=normal/hover/down/downhover |
-| `menuitem.png` | 縦3段: normal / selected / multisel |
-| `scrollbutton.png` | 縦4段: normal / hover / down / disabled |
-| `arrowud.png` | 横2列×縦4段: 列=up/down, 段=normal/hover/down/disabled |
-| `arrowlr.png` | 横2列×縦4段: 列=left/right, 段=normal/hover/down/disabled |
+| 画像               | 並び                                                              |
+| ------------------ | ----------------------------------------------------------------- |
+| `tab.png`          | 縦3段: normal / hover / active                                    |
+| `button.png`       | 縦3段: normal / hover / down                                      |
+| `sysbutton.png`    | 4列×4段: 列=Search/Mode/Pin/Close, 段=normal/hover/down/downhover |
+| `menuitem.png`     | 縦3段: normal / selected / multisel                               |
+| `scrollbutton.png` | 縦4段: normal / hover / down / disabled                           |
+| `arrowud.png`      | 横2列×縦4段: 列=up/down, 段=normal/hover/down/disabled            |
+| `arrowlr.png`      | 横2列×縦4段: 列=left/right, 段=normal/hover/down/disabled         |
 
 ## 6. 9-slice (`border` 属性)
 
