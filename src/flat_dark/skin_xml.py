@@ -13,14 +13,9 @@ XML_DECL = '<?xml version="1.0" encoding="UTF-16" standalone="yes" ?>'
 _TEXT_COLOR = T.hex_str(T.TEXT_FG)  # "#F3F3F3"
 _TEXT_MUTED_COLOR = T.hex_str(T.TEXT_MUTED)  # "#C7C7C7"
 
-_FONT_FACE_DEFAULT = "UD デジタル 教科書体 NK"
+_FONT_FACE_DEFAULT = "Meiryo UI"
 
-# フォントサイズ (CLaunch のフォント size 属性 = ピクセル相当)
-_FONT_SIZE_CAPTION = 13
-_FONT_SIZE_TAB_ACTIVE = 18
-_FONT_SIZE_TAB_INACTIVE = 14
-_FONT_SIZE_BUTTON = 13
-_FONT_SIZE_MENU = 13
+_FONT_SIZE_ALL = 9
 
 
 def render(variant: T.SkinVariant) -> str:
@@ -129,8 +124,8 @@ def render(variant: T.SkinVariant) -> str:
 \t\t\t<bottom height="Variable" base="TopFrame"   side="bottom" offset="0" />
 \t\t</arrangement>
 \t\t<text>
-\t\t\t<font face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_CAPTION}" style="bold" antiAlias="true" />
-\t\t\t<decoration shadow="none" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t<font face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_ALL}" style="bold" antiAlias="false" />
+\t\t\t<decoration shadow="lower" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
 \t\t</text>
 \t</caption>
 
@@ -141,13 +136,13 @@ def render(variant: T.SkinVariant) -> str:
 \t\t\t<arrangement pitch="2, 0" />
 \t\t\t<text>
 \t\t\t\t<font>
-\t\t\t\t\t<active   face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_TAB_ACTIVE}" style="bold" antiAlias="true" />
-\t\t\t\t\t<inactive face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_TAB_INACTIVE}" style="bold" antiAlias="true" />
+\t\t\t\t\t<active   face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_ALL}" style="bold" antiAlias="false" />
+\t\t\t\t\t<inactive face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_ALL}" style="normal" antiAlias="false" />
 \t\t\t\t</font>
 \t\t\t\t<decoration>
-\t\t\t\t\t<normal shadow="none" color="{_TEXT_MUTED_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
-\t\t\t\t\t<hover  shadow="none" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
-\t\t\t\t\t<active shadow="none" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<normal shadow="lower" color="{_TEXT_MUTED_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<hover  shadow="lower" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<active shadow="lower" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
 \t\t\t\t</decoration>
 \t\t\t</text>
 \t\t</tab>
@@ -159,11 +154,11 @@ def render(variant: T.SkinVariant) -> str:
 \t\t<button image="button.png" method="stretch" border="8, 8, 8, 8" designs="1">
 \t\t\t<arrangement pitch="6, 6" shiftHover="0, 0" shiftDown="0, 1" />
 \t\t\t<text>
-\t\t\t\t<font face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_BUTTON}" style="bold" antiAlias="true" />
+\t\t\t\t<font face="{_FONT_FACE_DEFAULT}" size="{_FONT_SIZE_ALL}" style="normal" antiAlias="false" />
 \t\t\t\t<decoration>
-\t\t\t\t\t<normal shadow="none" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
-\t\t\t\t\t<hover  shadow="none" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
-\t\t\t\t\t<down   shadow="none" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<normal shadow="lower" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<hover  shadow="lower" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<down   shadow="lower" color="{_TEXT_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
 \t\t\t\t</decoration>
 \t\t\t</text>
 \t\t</button>
@@ -195,11 +190,11 @@ def render(variant: T.SkinVariant) -> str:
 \t\t\t<multisel image="menuitem.png" left="0" top="72" width="1/1" height="1/3" method="stretch" border="8, 8, 8, 8" />
 \t\t\t<arrangement margin="4, 4, 4, 4" interval="8" />
 \t\t\t<text>
-\t\t\t\t<font fontFace="{_FONT_FACE_DEFAULT}" fontSize="{_FONT_SIZE_MENU}" fontStyle="bold" antiAlias="true" />
+\t\t\t\t<font fontFace="{_FONT_FACE_DEFAULT}" fontSize="{_FONT_SIZE_ALL}" fontStyle="normal" antiAlias="false" />
 \t\t\t\t<decoration>
-\t\t\t\t\t<normal   shadow="none" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
-\t\t\t\t\t<selected shadow="none" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
-\t\t\t\t\t<disabled shadow="none" color="{_TEXT_MUTED_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<normal   shadow="lower" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<selected shadow="lower" color="{_TEXT_COLOR}"       shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
+\t\t\t\t\t<disabled shadow="lower" color="{_TEXT_MUTED_COLOR}" shadowColor="#000000" shadowAlpha="255" shadowWidth="1" />
 \t\t\t\t</decoration>
 \t\t\t</text>
 \t\t</item>
@@ -236,17 +231,17 @@ def render(variant: T.SkinVariant) -> str:
 \t\t</scrollbutton>
 \t</submenu>
 
-\t<!-- Recommended settings (大きめサイズ: Win11 中タイル準拠) -->
+\t<!-- Recommended settings -->
 \t<recommended>
 \t\t<mode1>
-\t\t\t<caption textMargin="0, 0, 0, 0" centerText="true" multiLine="false" />
-\t\t\t<tab size="140, 38" textMargin="0, 0, 0, 0" fixedWidth="false" multiLine="false" leftText="false" />
-\t\t\t<button size="100, 100" count="6, 4" iconSize="64" iconMargin="0, 14, 0, 14" textMargin="0, 0, 0, 8" leftIcon="false" text="true" singleLine="true" leftText="false" />
+\t\t\t<caption textMargin="4, 0, 4, 0" centerText="false" multiLine="false" />
+\t\t\t<tab size="56, 20" textMargin="2, 0, 2, 0" fixedWidth="true" multiLine="false" leftText="false" />
+\t\t\t<button size="56, 56" count="7, 3" iconSize="32" iconMargin="0, 4, 0, 0" textMargin="0, 1, 0, 1" leftIcon="false" text="true" singleLine="false" leftText="false" />
 \t\t</mode1>
 \t\t<mode2>
-\t\t\t<caption textMargin="0, 0, 0, 0" centerText="true" multiLine="false" />
-\t\t\t<tab size="140, 38" textMargin="0, 0, 0, 0" fixedWidth="false" multiLine="false" leftText="false" />
-\t\t\t<button size="280, 36" count="2, 12" iconSize="24" iconMargin="8, 0, 8, 0" textMargin="0, 0, 6, 0" leftIcon="true" text="true" singleLine="true" leftText="true" />
+\t\t\t<caption textMargin="4, 0, 4, 0" centerText="false" multiLine="false" />
+\t\t\t<tab size="56, 20" textMargin="2, 0, 2, 0" fixedWidth="true" multiLine="false" leftText="false" />
+\t\t\t<button size="160, 24" count="2, 10" iconSize="16" iconMargin="6, 2, 6, 2" textMargin="0, 0, 2, 0" leftIcon="true" text="true" singleLine="true" leftText="true" />
 \t\t</mode2>
 \t</recommended>
 
